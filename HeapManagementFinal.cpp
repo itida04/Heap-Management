@@ -139,15 +139,15 @@ int main() {
         scanf("%d",&choice);
 
         switch(choice){
-            case 1:
-            	int inputI;
-            	printf("enter integer data value:\n");
-            	scanf("%d",&inputI);
-                ptr[i] = (int *)alloc(sizeof(int));
-    			*ptr[i] = inputI;
-    			i++;
-                break;
-        	case 2:
+	            	case 1:
+	            	     int inputI;
+	            	     printf("enter integer data value:\n");
+	            	     scanf("%d",&inputI);
+	                     ptr[i] = (int *)alloc(sizeof(int));
+	    		     *ptr[i] = inputI;
+	    		     i++;
+	                break;
+	        	case 2:
 			    double inputD;
 			    printf("enter double data value:\n");
 			    scanf("%lf", &inputD);
@@ -168,26 +168,26 @@ int main() {
 			    ptr[i] = (int *)stringPtr; // Assign the pointer to ptr[i], casting it to int *
 			    i++;
 			    break;
-            case 4:
-                printList(heap_start);
-                break;
-            case 5:
-            	printf("enter the index node to be freed:\n");
-            	scanf("%d",&j);
-            	if(j>=0 && j<n)
-            	{
-                free_mem(ptr[j]);
-                break;
-            	}
-                break;
-            case 6:
+		            case 4:
+		                printList(heap_start);
+		                break;
+		            case 5:
+		            	printf("enter the index node to be freed:\n");
+		            	scanf("%d",&j);
+		            	if(j>=0 && j<n)
+		            	{
+		                free_mem(ptr[j]);
+		                break;
+		            	}
+		                break;
+		            case 6:
 				dealloc_heap(heap_start);
 				break;
-            case 7:
-	            merge_freeList();
-            	break;
-            default:
-            	flag=1;
+		            case 7:
+			            merge_freeList();
+		            	break;
+		            default:
+		            	flag=1;
         }
     }
 
